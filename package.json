@@ -1,0 +1,25 @@
+{
+  "name": "kddi-proto2",
+  "version": "0.0.0",
+  "description": "ERROR: No README.md file found!",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-csso": "*",
+    "grunt-contrib-coffee": "*",
+    "grunt-contrib-connect": "*",
+    "grunt-contrib-compass": "*",
+    "grunt-contrib-jade": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-livereload": "*",
+    "grunt-regarde": "*"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "",
+  "author": "",
+  "license": "BSD"
+}
