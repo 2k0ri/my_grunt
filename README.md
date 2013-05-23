@@ -11,7 +11,11 @@ my grunt template.
 
 # Usage
 
+<<<<<<< HEAD
 ``` cmd
+=======
+```cmd
+>>>>>>> tmp
 > npm i
 > start grunt watch
 > start grunt live
@@ -19,8 +23,15 @@ my grunt template.
 
 or
 
+<<<<<<< HEAD
 ``` sh
 $ npm i
 $ grunt watch &
 $ grunt live &
+=======
+```sh
+$ npm i
+$ grunt watch &
+$ grunt live
+>>>>>>> tmp
 ```
