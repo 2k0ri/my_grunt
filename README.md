@@ -1,4 +1,4 @@
-my grunt template.
+my grunt template for static pages.
 
 - watch `grunt watch`
 	- Jade
@@ -11,11 +11,7 @@ my grunt template.
 
 # Usage
 
-<<<<<<< HEAD
 ``` cmd
-=======
-```cmd
->>>>>>> tmp
 > npm i
 > start grunt watch
 > start grunt live
@@ -23,15 +19,8 @@ my grunt template.
 
 or
 
-<<<<<<< HEAD
 ``` sh
 $ npm i
 $ grunt watch &
 $ grunt live &
-=======
-```sh
-$ npm i
-$ grunt watch &
-$ grunt live
->>>>>>> tmp
 ```
