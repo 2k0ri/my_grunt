@@ -1,26 +1,28 @@
 my grunt template for static pages.
 
-- watch `grunt watch`
+- open and watch(regarde) `grunt`
 	- Jade
 	- Sass(+Compass)
 	- CoffeeScript
+	- livereload
 - compress `grunt dist`
 	- csso
 	- UglifyJS2
-- livereload `grunt live`
 
 # Usage
 
 ``` cmd
+> mkdir pages && cd pages
+> git clone git://github.com/2k0ri/my_grunt.git .
 > npm i
-> start grunt watch
-> start grunt live
+> start grunt
 ```
 
 or
 
 ``` sh
+$ mkdir pages && cd pages
+$ git clone git://github.com/2k0ri/my_grunt.git .
 $ npm i
-$ grunt watch &
-$ grunt live &
+$ grunt &
 ```
