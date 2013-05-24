@@ -5,14 +5,13 @@
   "dependencies": {},
   "devDependencies": {
     "grunt": "*",
-    "grunt-csso": "*",
     "grunt-contrib-coffee": "*",
     "grunt-contrib-connect": "*",
     "grunt-contrib-compass": "*",
     "grunt-contrib-jade": "*",
-    "grunt-contrib-watch": "*",
     "grunt-contrib-uglify": "*",
     "grunt-contrib-livereload": "*",
+    "grunt-csso": "*",
     "grunt-regarde": "*"
   },
   "scripts": {

@@ -1,13 +1,13 @@
 my grunt template for static pages.
 
-- watch `grunt watch`
+- open and watch(regarde) `grunt`
 	- Jade
 	- Sass(+Compass)
 	- CoffeeScript
+	- livereload
 - compress `grunt dist`
 	- csso
 	- UglifyJS2
-- livereload `grunt live`
 
 # Usage
 
