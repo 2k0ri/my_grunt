@@ -13,7 +13,7 @@
     "grunt-contrib-uglify": "*",
     "grunt-contrib-livereload": "*",
     "grunt-csso": "*",
-    "gurnt-open": "*",
+    "grunt-open": "*",
     "grunt-contrib-watch": "*"
   },
   "scripts": {
