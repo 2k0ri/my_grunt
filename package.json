@@ -1,6 +1,6 @@
 {
   "name": "my_grunt",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "ERROR: No README.md file found!",
   "dependencies": {},
   "devDependencies": {
@@ -8,11 +8,13 @@
     "grunt-contrib-coffee": "*",
     "grunt-contrib-connect": "*",
     "grunt-contrib-compass": "*",
+    "grunt-contrib-stylus": "*",
+    "grunt-open": "*",
     "grunt-contrib-jade": "*",
     "grunt-contrib-uglify": "*",
     "grunt-contrib-livereload": "*",
     "grunt-csso": "*",
-    "grunt-regarde": "*"
+    "grunt-contrib-watch": "*"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
