@@ -1,8 +1,9 @@
 my grunt template for static pages.
 
-- open and watch(regarde) `grunt`
+- open and watch `grunt`
 	- Jade
 	- Sass(+Compass)
+	- Stylus
 	- CoffeeScript
 	- livereload
 - compress `grunt dist`
