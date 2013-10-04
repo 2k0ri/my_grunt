@@ -50,11 +50,27 @@ module.exports = (grunt) ->
         options:
           bare: true
     stylus:
-      compile:
-        files: "css/style.css": "css/style.styl"
+      # compile:
+        # files: "css/style.css": "css/*.styl"
+        # files: [{
+        #   expand: true
+        #   cwd: "styl"
+        #   src: "{,*/}*.styl"
+        #   dest: "css"
+        #   ext: ".css"
+        # }]
+      dev:
+        files: "css/style.css": "css/*.styl"
         options:
           urlfunc: "embedurl"
-          # compress: true
+          compress: false
+          linenos: true
+          firebug: true
+      dist:
+        files: "css/style.css": "css/*.styl"
+        options:
+          urlfunc: "embedurl"
+
     compass:
       options:
         cssDir: "css"
@@ -89,7 +105,7 @@ module.exports = (grunt) ->
         tasks: "coffee"
       stylus:
         files: "css/*.styl"
-        tasks: "stylus"
+        tasks: "stylus:dev"
       compass:
         files: "css/*.sass"
         tasks: "compass:dev"
@@ -100,5 +116,5 @@ module.exports = (grunt) ->
   for taskName of grunt.file.readJSON("package.json").devDependencies when taskName.substring(0, 6) is "grunt-" then grunt.loadNpmTasks taskName
 
   grunt.registerTask "default", ["livereload-start", "connect", "open", "watch"]
-  grunt.registerTask "dist", ["jade:dist", "coffee", "compass:dist", "uglify", "csso"]
+  grunt.registerTask "dist", ["jade:dist", "coffee", "stylus:dist", "uglify", "csso"]
   return
