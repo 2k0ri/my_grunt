@@ -88,10 +88,10 @@ module.exports = (grunt) ->
         files: "js/*.coffee"
         tasks: "coffee"
       stylus:
-        files: "css/*.styl"
+        files: "css/style.styl"
         tasks: "stylus"
       compass:
-        files: "css/*.sass"
+        files: "css/style.sass"
         tasks: "compass:dev"
       livereload:
         files: ["*.html", "js/*.js", "css/*.css"]
