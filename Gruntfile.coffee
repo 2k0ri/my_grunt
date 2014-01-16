@@ -100,5 +100,6 @@ module.exports = (grunt) ->
   for taskName of grunt.file.readJSON("package.json").devDependencies when taskName.substring(0, 6) is "grunt-" then grunt.loadNpmTasks taskName
 
   grunt.registerTask "default", ["livereload-start", "connect", "open", "watch"]
-  grunt.registerTask "dist", ["jade:dist", "coffee", "compass:dist", "uglify", "csso"]
+  # grunt.registerTask "dist", ["jade:dist", "coffee", "compass:dist", "uglify", "csso"]
+  grunt.registerTask "dist", ["jade:dist", "coffee", "stylus", "uglify", "csso"]
   return

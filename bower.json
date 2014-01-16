@@ -1,0 +1,20 @@
+{
+  "name": "my_grunt",
+  "version": "0.1.0",
+  "homepage": "https://github.com/2k0ri/my_grunt",
+  "authors": [
+    "2k0ri <esc13245@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize.scss": "*",
+    "normalize.styl": "*"
+  }
+}
