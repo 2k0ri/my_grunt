@@ -50,11 +50,27 @@ module.exports = (grunt) ->
         options:
           bare: true
     stylus:
-      compile:
-        files: "css/style.css": "css/style.styl"
+      # compile:
+        # files: "css/style.css": "css/*.styl"
+        # files: [{
+        #   expand: true
+        #   cwd: "styl"
+        #   src: "{,*/}*.styl"
+        #   dest: "css"
+        #   ext: ".css"
+        # }]
+      dev:
+        files: "css/style.css": "css/*.styl"
         options:
           urlfunc: "embedurl"
-          # compress: true
+          compress: false
+          linenos: true
+          firebug: true
+      dist:
+        files: "css/style.css": "css/*.styl"
+        options:
+          urlfunc: "embedurl"
+
     compass:
       options:
         cssDir: "css"
