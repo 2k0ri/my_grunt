@@ -1,7 +1,3 @@
-path = require("path")
-lrSnippet = require("grunt-contrib-livereload/lib/utils").livereloadSnippet
-folderMount = (connect, point) -> connect.static path.resolve(point)
-
 module.exports = (grunt) ->
 
   grunt.initConfig
@@ -88,14 +84,13 @@ module.exports = (grunt) ->
           environment: "production"
           force: true
     connect:
-      options:
-        port: 1337
       livereload:
         options:
-          middleware: (connect, options) -> [lrSnippet, folderMount(connect, ".")]
+          port: 1337
     open:
       server:
-        path: 'http://localhost:<%= connect.options.port %>'
+        path: 'http://127.0.0.1:<%= connect.livereload.options.port %>'
+        app: 'Chrome'
     watch:
       jade:
         files: "*.jade"
@@ -105,17 +100,16 @@ module.exports = (grunt) ->
         tasks: "coffee"
       stylus:
         files: "css/style.styl"
-        tasks: "stylus"
+        tasks: "stylus:dev"
       compass:
         files: "css/style.sass"
         tasks: "compass:dev"
-      livereload:
-        files: ["*.html", "js/*.js", "css/*.css"]
-        tasks: "livereload"
+      options:
+        livereload: true
 
   for taskName of grunt.file.readJSON("package.json").devDependencies when taskName.substring(0, 6) is "grunt-" then grunt.loadNpmTasks taskName
 
-  grunt.registerTask "default", ["livereload-start", "connect", "open", "watch"]
+  grunt.registerTask "default", ["connect", "open", "watch"]
   # grunt.registerTask "dist", ["jade:dist", "coffee", "compass:dist", "uglify", "csso"]
-  grunt.registerTask "dist", ["jade:dist", "coffee", "stylus", "uglify", "csso"]
+  grunt.registerTask "dist", ["jade:dist", "coffee", "stylus:dist", "uglify", "csso"]
   return
